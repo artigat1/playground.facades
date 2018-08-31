@@ -1,0 +1,24 @@
+{
+  "npmScope": "facades",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "facades": {
+      "tags": []
+    },
+    "facades-e2e": {
+      "tags": []
+    },
+    "music-collection-api": {
+      "tags": [
+        "api",
+        "library"
+      ]
+    }
+  }
+}

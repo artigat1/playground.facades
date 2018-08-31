@@ -1,0 +1,158 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "facades": {
+      "root": "apps\\facades",
+      "sourceRoot": "apps/facades/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist\\apps\\facades",
+            "index": "apps/facades/src/index.html",
+            "main": "apps/facades/src/main.ts",
+            "polyfills": "apps/facades/src/polyfills.ts",
+            "tsConfig": "apps\\facades\\tsconfig.app.json",
+            "assets": [
+              "apps/facades/src/favicon.ico",
+              "apps/facades/src/assets"
+            ],
+            "styles": [
+              "apps/facades/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/facades/src/environments/environment.ts",
+                  "with": "apps/facades/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "facades:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "facades:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "facades:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/facades/src/test.ts",
+            "polyfills": "apps/facades/src/polyfills.ts",
+            "tsConfig": "apps\\facades\\tsconfig.spec.json",
+            "karmaConfig": "apps\\facades\\karma.conf.js",
+            "styles": [
+              "apps/facades/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/facades/src/favicon.ico",
+              "apps/facades/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps\\facades\\tsconfig.app.json",
+              "apps\\facades\\tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "facades-e2e": {
+      "root": "apps\\facades-e2e",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps\\facades-e2e\\protractor.conf.js",
+            "devServerTarget": "facades:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "facades:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps\\facades-e2e\\tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "music-collection-api": {
+      "root": "libs/music-collection-api",
+      "sourceRoot": "libs/music-collection-api/src",
+      "projectType": "library",
+      "prefix": "facades",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/music-collection-api/tsconfig.lib.json",
+              "libs/music-collection-api/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/music-collection-api/jest.config.js",
+            "tsConfig": "libs/music-collection-api/tsconfig.spec.json",
+            "setupFile": "libs/music-collection-api/src/test-setup.ts"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "facades",
+  "cli": {
+    "defaultCollection": "@nrwl/schematics"
+  }
+}
