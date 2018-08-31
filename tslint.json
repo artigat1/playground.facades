@@ -138,6 +138,26 @@
           "onlyDependOnLibsWithTags": [
             "*"
           ]
+        },
+        {
+          "sourceTag": "shared",
+          "onlyDependOnLibsWithTags": [
+            "shared"
+          ]
+        },
+        {
+          "sourceTag": "lib:data-access",
+          "onlyDependOnLibsWithTags": [
+            "lib:data-access",
+            "lib:utils"
+          ]
+        },
+        {
+          "sourceTag": "lib:components",
+          "onlyDependOnLibsWithTags": [
+            "lib:components",
+            "lib:utils"
+          ]
         }
       ]
     }

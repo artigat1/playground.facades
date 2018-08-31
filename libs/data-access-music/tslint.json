@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "facades",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "facades",
       "kebab-case"
     ]
   }

@@ -1,10 +1,13 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/libs/music-collection-api",
+    "outDir": "../../dist/out-tsc/libs/data-access-music",
     "module": "commonjs",
     "types": ["jest", "node"]
   },
-  "files": ["src/test-setup.ts", "src/polyfills.ts"],
+  "files": [
+    "state/src/test-setup.ts",
+    "state/src/polyfills.ts"
+  ],
   "include": ["**/*.spec.ts", "**/*.d.ts"]
 }

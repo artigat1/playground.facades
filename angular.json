@@ -3,27 +3,27 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
-    "facades": {
-      "root": "apps\\facades",
-      "sourceRoot": "apps/facades/src",
+    "music-catalogue": {
+      "root": "apps/music-catalogue/",
+      "sourceRoot": "apps/music-catalogue/src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "facades",
       "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist\\apps\\facades",
-            "index": "apps/facades/src/index.html",
-            "main": "apps/facades/src/main.ts",
-            "polyfills": "apps/facades/src/polyfills.ts",
-            "tsConfig": "apps\\facades\\tsconfig.app.json",
+            "outputPath": "dist/apps/music-catalogue",
+            "index": "apps/music-catalogue/src/index.html",
+            "main": "apps/music-catalogue/src/main.ts",
+            "polyfills": "apps/music-catalogue/src/polyfills.ts",
+            "tsConfig": "apps/music-catalogue/tsconfig.app.json",
             "assets": [
-              "apps/facades/src/favicon.ico",
-              "apps/facades/src/assets"
+              "apps/music-catalogue/src/favicon.ico",
+              "apps/music-catalogue/src/assets"
             ],
             "styles": [
-              "apps/facades/src/styles.css"
+              "apps/music-catalogue/src/styles.css"
             ],
             "scripts": []
           },
@@ -31,8 +31,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/facades/src/environments/environment.ts",
-                  "with": "apps/facades/src/environments/environment.prod.ts"
+                  "replace": "apps/music-catalogue/src/environments/environment.ts",
+                  "with": "apps/music-catalogue/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -50,34 +50,34 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "facades:build"
+            "browserTarget": "music-catalogue:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "facades:build:production"
+              "browserTarget": "music-catalogue:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "facades:build"
+            "browserTarget": "music-catalogue:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "apps/facades/src/test.ts",
-            "polyfills": "apps/facades/src/polyfills.ts",
-            "tsConfig": "apps\\facades\\tsconfig.spec.json",
-            "karmaConfig": "apps\\facades\\karma.conf.js",
+            "main": "apps/music-catalogue/src/test.ts",
+            "polyfills": "apps/music-catalogue/src/polyfills.ts",
+            "tsConfig": "apps/music-catalogue/tsconfig.spec.json",
+            "karmaConfig": "apps/music-catalogue/karma.conf.js",
             "styles": [
-              "apps/facades/src/styles.css"
+              "apps/music-catalogue/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "apps/facades/src/favicon.ico",
-              "apps/facades/src/assets"
+              "apps/music-catalogue/src/favicon.ico",
+              "apps/music-catalogue/src/assets"
             ]
           }
         },
@@ -85,8 +85,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps\\facades\\tsconfig.app.json",
-              "apps\\facades\\tsconfig.spec.json"
+              "apps/music-catalogue/tsconfig.app.json",
+              "apps/music-catalogue/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -95,26 +95,26 @@
         }
       }
     },
-    "facades-e2e": {
-      "root": "apps\\facades-e2e",
+    "music-catalogue-e2e": {
+      "root": "apps/music-catalogue-e2e/",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "apps\\facades-e2e\\protractor.conf.js",
-            "devServerTarget": "facades:serve"
+            "protractorConfig": "apps/music-catalogue-e2e/protractor.conf.js",
+            "devServerTarget": "music-catalogue:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "facades:serve:production"
+              "devServerTarget": "music-catalogue:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "apps\\facades-e2e\\tsconfig.e2e.json",
+            "tsConfig": "apps/music-catalogue-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
@@ -122,9 +122,9 @@
         }
       }
     },
-    "music-collection-api": {
-      "root": "libs/music-collection-api",
-      "sourceRoot": "libs/music-collection-api/src",
+    "data-access-music": {
+      "root": "libs/data-access-music",
+      "sourceRoot": "libs/data-access-music/src",
       "projectType": "library",
       "prefix": "facades",
       "architect": {
@@ -132,8 +132,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/music-collection-api/tsconfig.lib.json",
-              "libs/music-collection-api/tsconfig.spec.json"
+              "libs/data-access-music/tsconfig.lib.json",
+              "libs/data-access-music/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -143,16 +143,16 @@
         "test": {
           "builder": "@nrwl/builders:jest",
           "options": {
-            "jestConfig": "libs/music-collection-api/jest.config.js",
-            "tsConfig": "libs/music-collection-api/tsconfig.spec.json",
-            "setupFile": "libs/music-collection-api/src/test-setup.ts"
+            "jestConfig": "libs/data-access-music/jest.config.js",
+            "tsConfig": "libs/data-access-music/tsconfig.spec.json",
+            "setupFile": "libs/data-access-music/src/test-setup.ts"
           }
         }
       }
     }
   },
-  "defaultProject": "facades",
   "cli": {
     "defaultCollection": "@nrwl/schematics"
-  }
+  },
+  "defaultProject": "music-catalogue"
 }

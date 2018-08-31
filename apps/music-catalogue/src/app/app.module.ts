@@ -3,10 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NxModule } from '@nrwl/nx';
+import { RouterModule } from '@angular/router';
+import { MusicStateModule } from '@facades/music/state';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NxModule.forRoot()],
+  imports: [
+    BrowserModule,
+    NxModule.forRoot(),
+    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    MusicStateModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

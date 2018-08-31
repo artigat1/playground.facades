@@ -1,15 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/apps/facades",
+    "outDir": "../../dist/out-tsc/apps/music-catalogue",
     "types": [
       "jasmine",
       "node"
     ]
   },
   "files": [
-    "src\\test.ts",
-    "src\\polyfills.ts"
+    "src/test.ts",
+    "src/polyfills.ts"
   ],
   "include": [
     "**/*.spec.ts",

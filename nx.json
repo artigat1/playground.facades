@@ -8,16 +8,17 @@
     "nx.json": "*"
   },
   "projects": {
-    "facades": {
-      "tags": []
-    },
-    "facades-e2e": {
-      "tags": []
-    },
-    "music-collection-api": {
+    "music-catalogue": {
       "tags": [
-        "api",
-        "library"
+        "application"
+      ]
+    },
+    "music-catalogue-e2e": {
+      "tags": []
+    },
+    "data-access-music": {
+      "tags": [
+        "lib:data-access"
       ]
     }
   }

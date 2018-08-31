@@ -21,8 +21,8 @@
       "@facades/*": [
         "libs/*"
       ],
-      "@facades/music-collection-api": [
-        "libs/music-collection-api/src/index.ts"
+      "@facades/music/state": [
+        "libs/data-access-music/state/src/index.ts"
       ]
     }
   }
