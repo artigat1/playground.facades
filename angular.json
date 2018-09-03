@@ -122,9 +122,9 @@
         }
       }
     },
-    "data-access-music": {
-      "root": "libs/data-access-music",
-      "sourceRoot": "libs/data-access-music/src",
+    "api-music": {
+      "root": "libs/api-music",
+      "sourceRoot": "libs/api-music/src",
       "projectType": "library",
       "prefix": "facades",
       "architect": {
@@ -132,8 +132,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/data-access-music/tsconfig.lib.json",
-              "libs/data-access-music/tsconfig.spec.json"
+              "libs/api-music/tsconfig.lib.json",
+              "libs/api-music/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -143,9 +143,9 @@
         "test": {
           "builder": "@nrwl/builders:jest",
           "options": {
-            "jestConfig": "libs/data-access-music/jest.config.js",
-            "tsConfig": "libs/data-access-music/tsconfig.spec.json",
-            "setupFile": "libs/data-access-music/src/test-setup.ts"
+            "jestConfig": "libs/api-music/jest.config.js",
+            "tsConfig": "libs/api-music/tsconfig.spec.json",
+            "setupFile": "libs/api-music/src/test-setup.ts"
           }
         }
       }
