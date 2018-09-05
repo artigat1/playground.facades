@@ -23,6 +23,9 @@
       ],
       "@facades/music/state": [
         "libs/data-access-music/state/src/index.ts"
+      ],
+      "@facades/api-music": [
+        "libs/api-music/src/index.ts"
       ]
     }
   }

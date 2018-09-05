@@ -16,7 +16,7 @@
     "music-catalogue-e2e": {
       "tags": []
     },
-    "data-access-music": {
+    "api-music": {
       "tags": [
         "lib:data-access"
       ]
