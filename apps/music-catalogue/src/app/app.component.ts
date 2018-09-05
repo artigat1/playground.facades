@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Music, MusicFacade } from '@facades/api-music';
 import { Observable } from 'rxjs';
+
+import { Music, MusicFacade } from '@libs/api-music';
 
 @Component({
   selector: 'facades-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'music-catalogue';
   collection$: Observable<Music[]>;
 
   constructor(private readonly musicStore: MusicFacade) {

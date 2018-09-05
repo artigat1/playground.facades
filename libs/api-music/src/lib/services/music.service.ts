@@ -15,7 +15,7 @@ export class MusicService {
 
   public getMusicCollection(): Observable<Music[]> {
     if(this.musicCollection.length === 0) {
-      this.musicCollection = MusicDataFactory.many(true, true, true, true);
+      this.musicCollection = MusicDataFactory.many(true, true, true, true, 50);
     }
     return of(this.musicCollection);
   }

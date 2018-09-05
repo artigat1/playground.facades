@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
+import { NxModule } from '@nrwl/nx';
+
 import { StoreModule } from '@ngrx/store';
-import { ApiMusicModule } from '@facades/api-music';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
+
+import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
+import { ApiMusicModule } from '@libs/api-music';
+import { UiModule } from '@libs/ui';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +23,8 @@ import { EffectsModule } from '@ngrx/effects';
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule,
-    StoreModule.forRoot({})
+    StoreModule.forRoot({}),
+    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

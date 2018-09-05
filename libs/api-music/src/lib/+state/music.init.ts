@@ -1,6 +1,6 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 
-import { Music } from '@facades/api-music';
+import { Music } from '../interfaces/music.interface';
 
 export function sortByTitle(obj1: Music, obj2: Music): number {
   return obj1.title.localeCompare(obj2.title);
