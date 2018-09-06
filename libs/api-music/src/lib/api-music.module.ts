@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -12,7 +11,6 @@ import { MusicFacade } from './+state/music.facade';
 
 @NgModule({
   imports: [
-    CommonModule,
     EffectsModule.forFeature([MusicEffects]),
     StoreModule.forFeature('music', reducer, { initialState: initialState })
   ],

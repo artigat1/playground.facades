@@ -26,6 +26,7 @@
       true,
       "spaces"
     ],
+    "indent-size": [true, 4],
     "interface-over-type-literal": true,
     "label-position": true,
     "max-line-length": [

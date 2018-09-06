@@ -23,6 +23,6 @@ export class MusicEffects {
       ofAction(MusicActions.LoadCollection),
       switchMap(() => this.service.getMusicCollection()),
       map(response => new MusicActions.LoadCollectionSuccess({collection: response })),
-      catchError(error => error.subscribe().switchMap(error => console.error(error)))
+      catchError(error => error.subscribe().switchMap(message => console.error(message)))
     );
 }

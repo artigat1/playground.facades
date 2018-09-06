@@ -1,6 +1,6 @@
 import * as faker from 'faker';
 
-import { MusicDataFactory } from '@facades/api-music/src/lib/services/music-factory.data';
+import { MusicDataFactory } from './music-factory.data';
 
 describe('Music Data Factory', () => {
   describe('single', () => {

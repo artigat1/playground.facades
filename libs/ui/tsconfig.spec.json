@@ -2,8 +2,9 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc/libs/ui",
+    "module": "commonjs",
     "types": [
-      "jasmine",
+      "jest",
       "node"
     ]
   },
